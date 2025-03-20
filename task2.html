@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <input  id="input" type="text" >
+    <button id="do">Do</button>
+    <script>
+        document.getElementById("do").addEventListener('click',()=>{
+           let a=document.getElementsByTagName("input")
+        //    for(i=0;i<a.length;i++){
+        //     a[i].setAttribute("placeholder","Enter your name")
+
+        //    }
+        })
+
+            // you can use both
+
+        document.getElementById("do").addEventListener('click',()=>{
+           let a=document.getElementById("input")
+           a.setAttribute("class","h1")
+        })
+    </script>
+
+</body>
+</html>

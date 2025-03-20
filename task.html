@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: red;
+        }
+        input{
+            background-color: black;
+            width: 70%;
+            height: 50px;
+            margin-left: 15%;
+            margin-top: 50px;
+            color: red;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom-color: red;
+        }
+        button{
+            cursor: pointer;
+            border: 2px solid darkgrey;
+            background-color: black;
+            color: red;
+            font-size:20px;
+            margin-top: 50px;
+            width: 20%;
+            height: 40px;
+            margin-left: 40px;
+        }
+        div{
+            width: 70%;
+            margin-left: 15%;
+            margin-top: 50px;
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+        
+        <input type="text" id="value">
+        <button id="add">Add text</button>
+        <div id="outer"></div>
+
+    <script>
+        document.getElementById("add").addEventListener('click',()=>{
+            let value=document.getElementById("value").value;
+            let h3=document.createElement("h3")
+            h3.setAttribute("id","h3")
+            h3.innerHTML=value;
+            let outer=document.getElementById=("outer");
+            outer.appendchilde(h3)
+        })
+    </script>
+</body>
+</html>

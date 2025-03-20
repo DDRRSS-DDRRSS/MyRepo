@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function fun()
+            {
+                event.preventDefault();
+                let id=document.getElementById("id").value
+                let name=document.getElementById("name").value
+                let email=document.getElementById("email").value
+                let Password=document.getElementById("Password").value       
+                let Address=document.getElementById("Address").value 
+                let Mobile_Number=document.getElementById("Mobile_Number").value  
+
+                    const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/   
+                    if(email=="")
+                    {
+                        document.getElementById("errorEmail").innerHTML="* This Is Required  👆 "
+                    }
+                    else if(!emailRegex.test(email))
+                    {
+                        document.getElementById("errorEmail").innerHTML="* Email is invalide 👆 "
+                    }
+
+                    const Mobile_NumberRegex=/^[6-9]\d{9}/
+                    if(Mobile_Number=="")
+                    {
+                        document.getElementById("errorMobile_Number").innerHTML="* This Is Required  👆 "
+                    }
+                    else if(!Mobile_NumberRegex.test(Mobile_Number))
+                    {
+                        document.getElementById("errorMobile_Number").innerHTML="* Mobile_Number is invalide 👆 "
+                    }
+
+                    const PasswordRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/
+                    if(Password=="")
+                    {
+                        document.getElementById("errorPassword").innerHTML="* This Is Required  👆 "
+                    }
+                    else if(!PasswordRegex.test(Password))
+                    {
+                        document.getElementById("errorPassword").innerHTML="* passoard is invalide 👆 "
+                    }
+
+            }
+            fun()
+    </script>
+    <style>
+        body
+        {
+            background-color: aliceblue;
+        }
+        form
+        {
+            background-color: rgb(70, 70, 116);
+            color: gold;
+            border: groove rgb(179, 177, 225) 5px;
+            width: 50%;
+            margin-left:25%;
+        }
+        form.lable
+        {
+            margin-left: 20%;
+            display: inline-block;
+            width: 100px;
+            color: gold;
+        }
+        form input
+        {
+            margin-right: 305%;
+        }
+        form button
+        {
+            box-shadow: 4px 4px black;
+            margin-left: 45%;
+            margin-bottom: 5px;
+            background-color: gold;
+            border: none;
+            color: rgb(70, 70, 116);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        form h3
+        {
+            color: gold;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        input{
+            animation-name: daksh;
+            position: relative;
+            animation-duration: 10s;
+            animation-delay: 1s;
+            border-radius: 50px;
+            font-family: cursive;
+        }
+        span{
+            display:inline-block;
+            background-color: red;
+        }
+     </style>
+</head>
+<body>
+    <form style="display: block;" id="form">
+        <h3>Please Fill The Form </h3>
+        <label for="id">Id</label>
+    <input type="number" id="id"><br><br>
+
+    <label for="name">Name</label>
+    <input type="text" id="name"><br><br>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email"><br><br>
+    <span id="errorEmail"></span><br>
+
+    <label for="Password">Password</label>
+    <input type="Password" id="Password"><br><br>
+    <span id="errorPassword"></span><br>
+
+    <label for="Mobile_Number">Mobile_Number</label>
+    <input type="number" id="Mobile_Number"><br><br>
+    <span id="errorMobile_Number"></span><br>
+
+    <label for="Address">Address</label>
+    <input type="text" id="Address"><br><br>
+
+    <button onclick="fun()">Submit</button>
+    </form>
+</body>
+</html> 
+
+
